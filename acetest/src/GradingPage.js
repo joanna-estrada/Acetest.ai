@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './GradingPage.css';  // Custom CSS for styling the page
 
 const GradingPage = () => {
-  const [score, setScore] = useState(0);  // Starts at 0 for animation
-  const [percentage, setPercentage] = useState(0);  // Starts at 0 for animation
-  const totalQuestions = 5;  // Example total questions
-  const correctAnswers = 3;  // Example correct answers
+  const [score, setScore] = useState(0);  
+  const [percentage, setPercentage] = useState(0);  
+  const totalQuestions = 5; 
+  const correctAnswers = 3; 
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();  
 
   useEffect(() => {
     const percentageValue = Math.round((correctAnswers / totalQuestions) * 100);
-    setMessage(getMessage(percentageValue));  // Set the message based on percentage
+    setMessage(getMessage(percentageValue));
 
     // Animate the score and percentage
     animateValue(setScore, 0, correctAnswers, 1000);
@@ -23,14 +25,13 @@ const GradingPage = () => {
     return "Keep practicing!";
   };
 
-  // Function to animate the value (both score and percentage)
   const animateValue = (setter, start, end, duration) => {
     let startTimestamp = null;
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);  // Progress from 0 to 1
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
       const value = Math.floor(progress * (end - start) + start);
-      setter(value);  // Update the state (score/percentage)
+      setter(value);  
       if (progress < 1) {
         window.requestAnimationFrame(step);
       }
@@ -46,25 +47,24 @@ const GradingPage = () => {
     { question: "Question 5", result: "Incorrect" }
   ];
 
+  const topicsToImprove = [
+    'Algebraic Equations',
+    'Geography',
+    'World History'
+  ];
+
+  const handleStudyPlanNavigation = () => {
+    navigate('/makeplan');  // Navigate to the StudyPlanPage
+  };
+
   return (
     <div className="grading-page-container">
       <div className="score-card">
-        {/* Ace letter at top left */}
         <div className="grade-letter">A</div>
-
-        {/* Percentage in the top right */}
         <div className="percentage">{percentage}%</div>
-
-        {/* Red symbol in the middle */}
-        <div className="red-symbol">♦</div>  {/* Red diamond symbol */}
-
-        {/* Score in bottom left */}
+        <div className="red-symbol">♦</div>
         <div className="score">{score}/{totalQuestions}</div>
-
-        {/* Grade letter in bottom right */}
-        <div className="grade-letter-bottom">A</div>
-
-        {/* Message in the middle */}
+        <div className="grade-letter-bottom">I</div>
         <div className="score-card-body">
           <p>{message}</p>
         </div>
@@ -82,6 +82,23 @@ const GradingPage = () => {
             </li>
           ))}
         </ul>
+
+        {/* Section for Topics Needing Improvement */}
+        <div className="improvement-section">
+          <h2>Topics Needing Improvement</h2>
+          <ul className="improvement-list">
+            {topicsToImprove.map((topic, index) => (
+              <li key={index}>{topic}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Button to navigate to the StudyPlanPage */}
+        <div className="study-plan-button-container">
+          <button className="study-plan-button" onClick={handleStudyPlanNavigation}>
+            Let's Make Your Study Plan
+          </button>
+        </div>
       </div>
     </div>
   );

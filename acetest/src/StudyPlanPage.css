@@ -1,0 +1,65 @@
+/* Table styling to match the screenshot aesthetics */
+.study-table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    background-color: var(--bs-secondary-bg);
+    border: 1px solid #334155;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.study-table th, .study-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #334155;
+}
+
+.study-table th {
+    font-weight: bold;
+    background-color: #1e293b;
+    color: #fff;
+}
+
+.study-table td {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+.study-table td ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.study-table td ul li {
+    margin: 0.5rem 0;
+}
+
+.study-table a {
+    color: #7dd3fc; /* Light blue for links */
+    text-decoration: none;
+    border-bottom: 1px dashed #7dd3fc;
+}
+
+.study-table a:hover {
+    text-decoration: underline;
+}
+
+/* For schedule table on the right */
+.study-table.schedule-table {
+    width: 100%;
+    margin-top: 1.5rem;
+    background-color: var(--bs-dark);
+    color: #fff;
+}
+
+.schedule-table th {
+    background-color: var(--bs-secondary-bg);
+    color: white;
+    font-weight: bold;
+}
+
+/* Increase font size and margins for spacing */
+h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}

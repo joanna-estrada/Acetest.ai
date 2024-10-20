@@ -1,128 +1,170 @@
 /* Container for the entire grading page */
 .grading-page-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding: 20px;
-    background-color: #1e293b; /* Dark background color */
-    color: white;
-    height: 100vh; /* Full viewport height */
-    gap: 30px; /* Add spacing between the score card and the score assessment */
-  }
-  
-  /* Score Card */
-  .score-card {
-    background-color: white;
-    color: black;
-    border-radius: 15px;
-    padding: 30px;
-    text-align: center;
-    width: 300px; /* Adjusted to match playing card size */
-    height: 450px; /* Adjusted to match playing card aspect ratio */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative; /* For absolute positioning of inner elements */
-  }
-  
-  /* Grade letter (A) in the top left */
-  .grade-letter {
-    font-size: 3rem; /* Reduced font size */
-    color: red;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  
-  /* Percentage in the top right */
-  .percentage {
-    font-size: 1.5rem; /* Reduced font size */
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  /* Score in the bottom left */
-  .score {
-    font-size: 1.5rem; /* Reduced font size */
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-  }
-  
-  /* Main body of the score card */
-  .score-card-body {
-    position: absolute;
-    top: 40%; /* Move it slightly above the middle */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the content horizontally and vertically */
-    text-align: center;
-  }
-  
-  /* Message text */
-  .score-card-body p {
-    margin-top: 10px;
-    font-size: 1.2rem; /* Reduced font size */
-    font-weight: bold;
-  }
-  
-  /* Red symbol (e.g., diamond or spade) */
-  .red-symbol {
-    font-size: 11rem; /* Reduced size of the symbol */
-    color: red;
-    position: absolute;
-    top: 60%; /* Position it below the message */
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  /* Grade letter (A) in the bottom right */
-  .grade-letter-bottom {
-    font-size: 3rem; /* Reduced font size */
-    color: red;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-  }
-  
-  /* Score Assessment Section */
-  .score-assessment {
-    background-color: #1e293b;
-    border-left: 1px solid #334155;
-    padding-left: 20px;
-  }
-  
-  .score-assessment h2 {
-    font-size: 1.5rem; /* Reduced font size */
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  /* List of assessments */
-  .assessment-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .assessment-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #334155;
-  }
-  
-  /* Badge styles for correct and incorrect answers */
-  .badge {
-    padding: 5px 10px;
-    border-radius: 12px;
-    font-weight: bold;
-  }
-  
-  .correct {
-    background-color: #22c55e; /* Green background for correct answers */
-  }
-  
-  .incorrect {
-    background-color: #ef4444; /* Red background for incorrect answers */
-  }
-  
+  display: flex;
+  justify-content: space-between; /* Space between card and assessment */
+  align-items: flex-start; /* Align to the top */
+  padding: 20px;
+  background-color: #1e293b; /* Dark background color */
+  color: white;
+  min-height: 100vh; /* Ensure the container takes the full viewport height */
+  gap: 30px; /* Add spacing between the card and assessment */
+}
+
+/* Score Card */
+.score-card {
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  width: 300px; /* Fixed width */
+  height: 100%; /* Make the card stretch to full height */
+  min-height: 550px; /* Set a minimum height to stretch the card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* For absolute positioning of inner elements */
+  flex-shrink: 0; /* Prevent the card from shrinking */
+}
+
+/* Grade letter (A) in the top left */
+.grade-letter {
+  font-size: 3rem;
+  color: red;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* Percentage in the top right */
+.percentage {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Score in the bottom left */
+.score {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+/* Main body of the score card */
+.score-card-body {
+  margin-top: 100px; 
+  text-align: center;
+}
+
+/* Message text */
+.score-card-body p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Red symbol (e.g., diamond or spade) */
+.red-symbol {
+  font-size: 16rem;
+  color: red;
+  margin-top: 20px; /* Added margin to position the symbol */
+}
+
+/* Grade letter (A) in the bottom right */
+.grade-letter-bottom {
+  font-size: 3rem;
+  color: red;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Score Assessment Section */
+.score-assessment {
+  background-color: #1e293b;
+  border-left: 1px solid #334155;
+  padding-left: 20px;
+  flex-grow: 1; /* Let this section grow to fill available space */
+}
+
+.score-assessment h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* List of assessments */
+.assessment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.assessment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #334155;
+}
+
+/* Badge styles for correct and incorrect answers */
+.badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.correct {
+  background-color: #22c55e; /* Green background for correct answers */
+}
+
+.incorrect {
+  background-color: #ef4444; /* Red background for incorrect answers */
+}
+
+/* Improvement Section */
+.improvement-section {
+  margin-top: 30px;
+}
+
+.improvement-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #f9fafb;
+  font-weight: bold;
+}
+
+.improvement-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.improvement-list li {
+  margin: 8px 0;
+  font-size: 1.2rem;
+  color: #94a3b8;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 5px;
+}
+
+/* Button to navigate to Study Plan Page */
+.study-plan-button-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.study-plan-button {
+  background-color: #ff7f50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.study-plan-button:hover { 
+  background-color: #ff6347; /* Darker shade on hover */ 
+}
