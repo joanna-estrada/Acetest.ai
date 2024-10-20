@@ -1,7 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './StudyPlanPage.css';
 
 const StudyPlanPage = () => {
+  const [testDay, setTestDay] = useState('');
+  const [studyHours, setStudyHours] = useState('');
+  const [stressLevel, setStressLevel] = useState('');
+
+  // Retrieve the form data from localStorage when the component mounts
+  useEffect(() => {
+    const savedTestDay = localStorage.getItem('testDay');
+    const savedStudyHours = localStorage.getItem('studyHours');
+    const savedStressLevel = localStorage.getItem('stressLevel');
+    
+    setTestDay(savedTestDay || '');
+    setStudyHours(savedStudyHours || '');
+    setStressLevel(savedStressLevel || '');
+  }, []);
+
   // Initialize all sections as collapsed (true means collapsed)
   const [sectionsCollapsed, setSectionsCollapsed] = useState({
     mathematics: true,
@@ -60,6 +75,13 @@ const StudyPlanPage = () => {
       </header>
 
       <main className="container mt-3">
+        <div className="text-center mb-4">
+          <h3>Your Study Plan</h3>
+          <p><strong>Test Day:</strong> {testDay}</p>
+          <p><strong>Hours to Study:</strong> {studyHours}</p>
+          <p><strong>Stress Level:</strong> {stressLevel}</p>
+        </div>
+
         {sections.map((section, index) => (
           <section key={index} className="mb-4 study-section">
             <h3 className="mb-3">
@@ -72,7 +94,6 @@ const StudyPlanPage = () => {
               </button>
             </h3>
 
-            {/* If the section is collapsed, do not show the content */}
             {!sectionsCollapsed[section.id] && (
               <div className="row">
                 <div className="col-md-6 mb-3">
@@ -137,12 +158,8 @@ const StudyPlanPage = () => {
           </section>
         ))}
 
-        {/* Motivational quotes */}
         <div className="text-center my-4">
           <p className="lead font-italic">Believe in yourself and all that you are.</p>
-        </div>
-        <div className="text-center my-4">
-          <p className="lead font-italic">Your potential is limitless. Keep pushing forward.</p>
         </div>
       </main>
 

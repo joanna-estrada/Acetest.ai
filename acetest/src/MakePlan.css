@@ -1,18 +1,112 @@
-/* MakePlan.css */
-.make-plan-container {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border: none;
-    padding: 10px 20px;
+/* Container styles */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #1e293b; /* Dark background */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     color: white;
+}
+
+/* Title styles */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Row and column styling */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Placeholder for card */
+.card-placeholder {
+    width: 250px;
+    height: 350px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Label styling */
+label {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #9ca3af; /* Light gray */
+}
+
+/* Input styling */
+input[type="date"],
+input[type="number"],
+input[type="range"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #374151; /* Darker background for input */
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Input range slider */
+input[type="range"] {
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    background: #3b82f6;
+    border-radius: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+    background: #3b82f6;
+    border-radius: 50%;
     cursor: pointer;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
+    -webkit-appearance: none;
+}
+
+.stress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+button[type="submit"] {
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2563eb;
+}

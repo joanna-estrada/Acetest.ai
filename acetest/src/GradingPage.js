@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './GradingPage.css';  // Custom CSS for styling the page
+import './GradingPage.css'; // Custom CSS for styling the page
 
 const GradingPage = () => {
-  const [score, setScore] = useState(0);  
-  const [percentage, setPercentage] = useState(0);  
-  const totalQuestions = 5; 
-  const correctAnswers = 3; 
+  const [score, setScore] = useState(0);
+  const [percentage, setPercentage] = useState(0);
+  const totalQuestions = 5;
+  const correctAnswers = 3;
   const [message, setMessage] = useState('');
-  const navigate = useNavigate();  
+  const navigate = useNavigate(); // Import navigation function
 
   useEffect(() => {
     const percentageValue = Math.round((correctAnswers / totalQuestions) * 100);
     setMessage(getMessage(percentageValue));
-
-    // Animate the score and percentage
     animateValue(setScore, 0, correctAnswers, 1000);
     animateValue(setPercentage, 0, percentageValue, 1000);
   }, [correctAnswers, totalQuestions]);
@@ -31,7 +29,7 @@ const GradingPage = () => {
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
       const value = Math.floor(progress * (end - start) + start);
-      setter(value);  
+      setter(value);
       if (progress < 1) {
         window.requestAnimationFrame(step);
       }
@@ -53,8 +51,9 @@ const GradingPage = () => {
     'World History'
   ];
 
+  // This function handles the navigation to the MakePlan page
   const handleStudyPlanNavigation = () => {
-    navigate('/makeplan');  // Navigate to the StudyPlanPage
+    navigate('/makeplan'); // Navigate to the MakePlan page
   };
 
   return (
@@ -83,7 +82,6 @@ const GradingPage = () => {
           ))}
         </ul>
 
-        {/* Section for Topics Needing Improvement */}
         <div className="improvement-section">
           <h2>Topics Needing Improvement</h2>
           <ul className="improvement-list">
@@ -93,7 +91,6 @@ const GradingPage = () => {
           </ul>
         </div>
 
-        {/* Button to navigate to the StudyPlanPage */}
         <div className="study-plan-button-container">
           <button className="study-plan-button" onClick={handleStudyPlanNavigation}>
             Let's Make Your Study Plan
