@@ -4,21 +4,19 @@ import './App.css';
 import HomePage from './HomePage';  // Import HomePage
 import TestGenPage from './TestGenPage';  // Import TestGenPage
 
-function App() {
-  return (
-    <Router>
+function App() {  
+  return (  
+    <Router>  
       <div className="App">
-        <header className="App-header">
-          <h1>ACEtest.ai</h1>
-        </header>
+      
         <Routes>
           {/* Define routes for navigation */}
-          <Route path="/" element={<HomePage />} />
-          <Route path="/testgen" element={<TestGenPage />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
-
+          <Route path="/" element={<HomePage />} /> 
+          <Route path="/testgen" element={<TestGenPage />} /> 
+        </Routes> 
+      </div> 
+    </Router> 
+  );  
+}  
+   
 export default App;
