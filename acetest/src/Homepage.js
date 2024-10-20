@@ -15,7 +15,7 @@ const HomePage = () => {
   };
 
   const handleGenerate = () => {
-    //send the file and topics to your backend or AI service
+    // Send the file and topics to your backend or AI service
     setGeneratedExam(`Exam generated from ${file?.name || "no file"} with topics: ${topics}`);
   };
 
@@ -37,13 +37,16 @@ const HomePage = () => {
 
       <section id="upload-section">
         <h3>Upload Your Class Notes</h3>
-        <input type="file" onChange={handleFileUpload} accept=".pdf,.docx,.pptx,.txt" />
-        <br/><br/>
-
-        <label>Know what’s on the test? Type here:</label>
-        <input type="text" value={topics} onChange={handleTopicChange} placeholder="Key topics" />
-        <br/><br/>
         
+        {/* Wrap both inputs in a div with a class for flexbox */}
+        <div className="input-container">
+          <input type="file" onChange={handleFileUpload} accept=".pdf,.docx,.pptx,.txt" />
+          
+          <label>Know what’s on the test? Type here:</label>
+          <input type="text" value={topics} onChange={handleTopicChange} placeholder="Key topics" />
+        </div>
+        
+        <br/><br/>
         <button onClick={handleGenerate}>Generate</button>
       </section>
 
