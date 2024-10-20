@@ -1,9 +1,9 @@
-/* HomePage.css */
+/* General Body and Page Styles */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #000000;  /* Black background */
+    color: #ffffff;  /* White text for readability */
   }
   
   .homepage {
@@ -12,30 +12,32 @@ body {
   
   .homepage-header {
     text-align: center;
-    background-color: #282c34;
-    padding: 20px;
-    color: white;
+    background-color: #000000;  /* Black background for the header */
+    padding: 40px 20px;  /* Increased padding for better spacing */
+    color: white;  /* White text */
   }
   
   .homepage-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3.5rem;  /* Increased font size */
+    margin-bottom: 15px;
   }
   
   .slogan {
     font-size: 1.5rem;
     margin-top: 10px;
+    color: #61dafb;  /* Light blue color for the slogan */
   }
   
+  /* Content Section */
   .content {
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-top: 40px;  /* Increased margin for better spacing */
     padding: 20px;
   }
   
   .left-section, .right-section {
-    width: 40%;
+    width: 45%;  /* Slightly wider sections */
   }
   
   .label {
@@ -46,25 +48,30 @@ body {
   
   .input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;  /* Increased padding for better usability */
     border-radius: 5px;
     border: 1px solid #ccc;
+    background-color: #333333;  /* Dark gray input fields */
+    color: #ffffff;  /* White text in input fields */
   }
   
   .textarea {
     width: 100%;
-    height: 120px;
-    padding: 10px;
+    height: 140px;  /* Slightly taller textarea */
+    padding: 12px;  /* Increased padding */
     border-radius: 5px;
     border: 1px solid #ccc;
     resize: vertical;
+    background-color: #333333;  /* Dark gray background for textarea */
+    color: #ffffff;  /* White text in textarea */
   }
   
+  /* Switches and Button Section */
   .switches-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 40px;  /* Increased margin */
   }
   
   .switch-container {
@@ -81,20 +88,24 @@ body {
   .checkbox {
     width: 20px;
     height: 20px;
+    background-color: #ffffff;  /* White checkboxes */
   }
   
+  /* Generate Button */
   .generate-btn {
-    padding: 15px 30px;
-    background-color: #61dafb;
+    padding: 15px 40px;  /* Slightly larger padding */
+    background-color: #61dafb;  /* Light blue background */
     border: none;
     border-radius: 8px;
     font-size: 1.2rem;
-    color: white;
+    color: black;  /* Black text for contrast */
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* Subtle shadow */
   }
   
   .generate-btn:hover {
-    background-color: #21a1f1;
+    background-color: #21a1f1;  /* Darker blue on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);  /* Stronger shadow on hover */
   }
   
