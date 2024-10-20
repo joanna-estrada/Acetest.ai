@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';  // Import useNavigate to handle
 import './TestGenPage.css';
 
 const MultiStateBox = () => {
-  const states = [ 
+  const states = [
     { 
       title: 'Problem 1', 
       description: 'Solve the equation: 2x + 3 = 7',
@@ -62,11 +62,11 @@ const TestGenPage = () => {
       <section>
         <p>Let's see how much you know!</p>
         {/* Render the MultiStateBox component */}
-        <TestGenPage />
+        <MultiStateBox />
         <button onClick={handleGrade}>Grade</button> {/* "Grade" button */}
       </section>
-    </div> 
-  ); 
-}; 
+    </div>
+  );
+};
 
 export default TestGenPage;
