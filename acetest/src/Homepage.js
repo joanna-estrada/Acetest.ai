@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';  // Import the useNavigate hook
 import './HomePage.css';  // Import the external CSS file
 
 const HomePage = () => {
   const [file, setFile] = useState(null);
   const [detailedInstructions, setDetailedInstructions] = useState('');
   const [multipleChoice, setMultipleChoice] = useState(false);
-  const [openEnded, setOpenEnded] = useState(false);
+  const [openEnded, setOpenEnded] = useState(false); 
 
-  const handleFileUpload = (event) => {
-    setFile(event.target.files[0]);
+  const navigate = useNavigate();  // Initialize the hook to navigate between pages
+
+  const handleFileUpload = (event) => { 
+    setFile(event.target.files[0]); 
   };
 
   const handleDetailedInstructionsChange = (event) => {
@@ -16,8 +19,11 @@ const HomePage = () => {
   };
 
   const handleGenerate = () => {
-    // Send the file and detailedInstructions to your backend or AI service
+    // Log or send the data as necessary
     console.log('Generate exam with:', { file, detailedInstructions, multipleChoice, openEnded });
+    
+    // Navigate to the TestGenPage when the button is clicked
+    navigate('/testgen');  // Programmatically navigate to the "TestGenPage"
   };
 
   return (
