@@ -31,7 +31,7 @@ const HomePage = () => {
       <header className="homepage-header">
         <div className="header-content">
           <div className="logo-container">
-            <img src="/img/acelogo.png" alt="AceTest Logo" className="header-logo" />
+          <img src={`${process.env.PUBLIC_URL}/img/logo.png`} alt="AceTest Logo" className="logo" />
           </div>
           <div className="blurb-container">
             <h1 className="title">AceTest.AI</h1>
