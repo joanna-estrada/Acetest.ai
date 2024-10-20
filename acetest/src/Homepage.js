@@ -27,11 +27,19 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      {/* Header Section */}
+      {/* Header Section with logo and blurb */}
       <header className="homepage-header">
-        <img src="/img/acelogo.png" alt="AceTest Logo" className="header-logo" />
-        <h1>ACEtest.ai</h1>
-        <p className="slogan">"Ace Every Test with AI-Powered Prep – Study Smarter, Not Harder"</p>
+        <div className="header-content">
+          <div className="logo-container">
+            <img src="/img/acelogo.png" alt="AceTest Logo" className="header-logo" />
+          </div>
+          <div className="blurb-container">
+            <h1 className="title">AceTest.AI</h1>
+            <p className="blurb">
+              We empower learners to unlock their full potential, transforming studying into a confident, stress-free journey — so everyone can ace their goals.
+            </p>
+          </div>
+        </div>
       </header>
 
       {/* Content Section */}

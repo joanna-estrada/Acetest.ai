@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #000000;  /* Black background */
-    color: #f5efdc;  /* White text for readability */
+    background-color: #f5efdc;  /* cream background */
+    color: #2f4858;  /* marine blue text for readability */
   }
   
   .homepage {
@@ -12,7 +12,7 @@ body {
   
   .homepage-header {
     text-align: center;
-    background-color: #000000;  /* Black background for the header */
+    background-color: #e1dac6;  /* Black background for the header */
     padding: 40px 20px;  /* Increased padding for better spacing */
     color: #f5efdc;  /* White text */
   }

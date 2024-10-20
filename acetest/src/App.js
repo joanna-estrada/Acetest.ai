@@ -2,9 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './custom.css'; 
-import HomePage from './HomePage'; 
+// import HomePage from './HomePage'; 
 import TestGenPage from './TestGenPage';  
 import GradingPage from './GradingPage'; 
+import Header from './components/Header';
+import MainContent from './components/MainContent';
 
 function App() {   
   return (   
