@@ -1,0 +1,28 @@
+#ace-card {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(240, 234, 234, 0.1);
+}
+
+.list-group-item {
+    background-color: transparent;
+    border-color: rgba(209, 195, 195, 0.125);
+}
+
+@media (max-width: 767px) {
+    #ace-card {
+        max-width: 250px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+}

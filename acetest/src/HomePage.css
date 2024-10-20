@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #000000;  /* Black background */
-    color: #ffffff;  /* White text for readability */
+    color: #f5efdc;  /* White text for readability */
   }
   
   .homepage {
@@ -14,7 +14,7 @@ body {
     text-align: center;
     background-color: #000000;  /* Black background for the header */
     padding: 40px 20px;  /* Increased padding for better spacing */
-    color: white;  /* White text */
+    color: #f5efdc;  /* White text */
   }
   
   .homepage-header h1 {
@@ -52,7 +52,7 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
     background-color: #333333;  /* Dark gray input fields */
-    color: #ffffff;  /* White text in input fields */
+    color: #090909;  /* White text in input fields */
   }
   
   .textarea {
@@ -63,7 +63,7 @@ body {
     border: 1px solid #ccc;
     resize: vertical;
     background-color: #333333;  /* Dark gray background for textarea */
-    color: #ffffff;  /* White text in textarea */
+    color: #ffe0e0;  /* White text in textarea */
   }
   
   /* Switches and Button Section */
@@ -88,7 +88,7 @@ body {
   .checkbox {
     width: 20px;
     height: 20px;
-    background-color: #ffffff;  /* White checkboxes */
+    background-color: #fbf9f9;  /* White checkboxes */
   }
   
   /* Generate Button */
