@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';  // Import useNavigate to handle
 import './TestGenPage.css';
 
 const MultiStateBox = () => {
-  const states = [
-    {
-      title: 'Problem 1',
+  const states = [ 
+    { 
+      title: 'Problem 1', 
       description: 'Solve the equation: 2x + 3 = 7',
       options: ['Option A', 'Option B', 'Option C', 'Option D'],
     },
@@ -19,10 +19,6 @@ const MultiStateBox = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({});  // Store the answers
-
-  const handleLeftClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? states.length - 1 : prevIndex - 1));
-  };
 
   const handleRightClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex < states.length - 1 ? prevIndex + 1 : prevIndex));
@@ -44,8 +40,7 @@ const MultiStateBox = () => {
         ))}
       </ul>
       <div className="button-container">
-        <button onClick={handleLeftClick} aria-label="Previous">Left</button>
-        <button onClick={handleRightClick} aria-label="Next" style={{ marginLeft: '10px' }}>Right</button>
+        <button onClick={handleRightClick} aria-label="Next" style={{ marginLeft: '10px' }}>Next</button>
       </div>
     </div>
   );
@@ -67,11 +62,11 @@ const TestGenPage = () => {
       <section>
         <p>Let's see how much you know!</p>
         {/* Render the MultiStateBox component */}
-        <MultiStateBox />
+        <TestGenPage />
         <button onClick={handleGrade}>Grade</button> {/* "Grade" button */}
       </section>
-    </div>
-  );
-};
+    </div> 
+  ); 
+}; 
 
 export default TestGenPage;
