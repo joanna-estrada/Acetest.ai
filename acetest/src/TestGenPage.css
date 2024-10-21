@@ -1,67 +1,64 @@
-/* Multi-State Box Container */
+.test-gen-page {
+  padding: 20px;
+  background-color: #1e293b;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #7dd3fc;
+}
+
+section {
+  margin: 30px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+.options-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.options-list li {
+  background-color: #2d3748;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #4a5568;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.options-list li:hover {
+  background-color: #4a5568;
+}
+
+.options-list li.selected {
+  background-color: #38bdf8; /* Highlight selected option */
+}
+
 .multi-state-box-container {
-    border: 2px solid #007bff;  /* Keep the blue border */
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;  /* Maximum width for larger screens */
-    background-color: #fff3f3;  /* Soft background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
-    text-align: center;
-  }
-  
-  /* Button Container */
-  .button-container {
-    display: flex;
-    justify-content: center;  /* Center the buttons */
-    margin-top: 20px;  /* Add margin above the button */
-  }
-  
-  /* Style for Buttons */
-  .button-container button {
-    padding: 12px 24px;  /* Bigger padding for a larger button */
-    background-color: #007bff;  /* Blue background */
-    color: white;  /* White text */
-    font-size: 1rem;  /* Slightly larger font for better readability */
-    border: none;
-    border-radius: 8px;  /* Round the corners */
-    cursor: pointer;  /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover effect */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);  /* Add shadow for depth */
-  }
-  
-  /* Hover Effect for Buttons */
-  .button-container button:hover {
-    background-color: #0056b3;  /* Darker blue on hover */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);  /* Increase shadow on hover */
-  }
-  
-  /* Focus Effect for Buttons */
-  .button-container button:focus {
-    outline: none;  /* Remove default focus outline */
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);  /* Custom focus ring */
-  }
-  
-  /* Test Generation Page */
-  .test-gen-page {
-    padding: 20px;
-    text-align: center;
-    background-color: #f9f9f9;  /* Light background for the page */
-    min-height: 100vh;  /* Ensure the page takes full height */
-  }
-  
-  /* Style for h1 in the Test Generation Page */
-  .test-gen-page h1 {
-    font-size: 2.5rem;  /* Large heading */
-    color: #007bff;  /* Match the button's blue color */
-    margin-bottom: 20px;
-  }
-  
-  /* Paragraph Text in the Test Generation Page */
-  .test-gen-page p {
-    font-size: 1.2rem;  /* Larger paragraph font */
-    color: #333333;  /* Darker gray for readability */
-    margin-bottom: 30px;
-  }
-  
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button-container {
+  margin-top: 20px;
+}

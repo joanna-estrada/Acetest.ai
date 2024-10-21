@@ -46,9 +46,9 @@ const GradingPage = () => {
   ];
 
   const topicsToImprove = [
-    'Algebraic Equations',
-    'Geography',
-    'World History'
+    'Consumer Behavior',
+    'Digital Marketing',
+    'Brand Strategy'
   ];
 
   // This function handles the navigation to the MakePlan page
