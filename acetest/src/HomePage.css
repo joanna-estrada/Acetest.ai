@@ -1,111 +1,131 @@
 /* General Body and Page Styles */
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5efdc;  /* cream background */
-    color: #2f4858;  /* marine blue text for readability */
-  }
-  
-  .homepage {
-    padding: 20px;
-  }
-  
-  .homepage-header {
-    text-align: center;
-    background-color: #e1dac6;  /* Black background for the header */
-    padding: 40px 20px;  /* Increased padding for better spacing */
-    color: #f5efdc;  /* White text */
-  }
-  
-  .homepage-header h1 {
-    font-size: 3.5rem;  /* Increased font size */
-    margin-bottom: 15px;
-  }
-  
-  .slogan {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: #61dafb;  /* Light blue color for the slogan */
-  }
-  
-  /* Content Section */
-  .content {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;  /* Increased margin for better spacing */
-    padding: 20px;
-  }
-  
-  .left-section, .right-section {
-    width: 45%;  /* Slightly wider sections */
-  }
-  
-  .label {
-    font-size: 1.2rem;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .input {
-    width: 100%;
-    padding: 12px;  /* Increased padding for better usability */
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #333333;  /* Dark gray input fields */
-    color: #090909;  /* White text in input fields */
-  }
-  
-  .textarea {
-    width: 100%;
-    height: 140px;  /* Slightly taller textarea */
-    padding: 12px;  /* Increased padding */
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    resize: vertical;
-    background-color: #333333;  /* Dark gray background for textarea */
-    color: #ffe0e0;  /* White text in textarea */
-  }
-  
-  /* Switches and Button Section */
-  .switches-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;  /* Increased margin */
-  }
-  
-  .switch-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .switch-label {
-    font-size: 1.2rem;
-    margin-right: 10px;
-  }
-  
-  .checkbox {
-    width: 20px;
-    height: 20px;
-    background-color: #fbf9f9;  /* White checkboxes */
-  }
-  
-  /* Generate Button */
-  .generate-btn {
-    padding: 15px 40px;  /* Slightly larger padding */
-    background-color: #61dafb;  /* Light blue background */
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    color: black;  /* Black text for contrast */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* Subtle shadow */
-  }
-  
-  .generate-btn:hover {
-    background-color: #21a1f1;  /* Darker blue on hover */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);  /* Stronger shadow on hover */
-  }
-  
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e293b;  /* Dark blue background */
+  color: #f5f5f5;  /* Light text for readability */
+}
+
+.homepage {
+  padding: 20px;
+}
+
+.homepage-header {
+  text-align: center;
+  background: linear-gradient(135deg, #0f172a 0%, #7dd3fc 100%);  /* Dark blue to light blue gradient */
+  padding: 40px 20px;
+  color: #f5f5f5;  /* Light text */
+}
+
+.homepage-header h1 {
+  font-size: 3.5rem;  /* Increased font size */
+  margin-bottom: 15px;
+  color: #7dd3fc;  /* Light blue for the title */
+}
+
+.slogan {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #38bdf8;  /* Lighter blue color for the slogan */
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;  /* Increased margin for better spacing */
+  padding: 20px;
+}
+
+.left-section, .right-section {
+  width: 45%;  /* Slightly wider sections */
+}
+
+.label {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 10px;
+  color: #7dd3fc;  /* Light blue text for labels */
+}
+
+/* Hide the default file input */
+.input-file {
+  display: none;
+}
+
+.custom-upload-btn {
+  padding: 10px 20px;
+  background-color: #3b82f6;  /* Bright blue background */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-upload-btn:hover {
+  background-color: #2563eb;  /* Darker blue on hover */
+}
+
+/* Display the file name */
+.file-name {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #7dd3fc;
+}
+
+.textarea {
+  width: 100%;
+  height: 140px;  /* Slightly taller textarea */
+  padding: 12px;  /* Increased padding */
+  border-radius: 5px;
+  border: 1px solid #334155;  /* Dark grayish-blue border */
+  resize: vertical;
+  background-color: #1e293b;  /* Dark blue background for textarea */
+  color: #f5f5f5;  /* Light text in textarea */
+}
+
+/* Switches and Button Section */
+.switches-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;  /* Increased margin */
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.switch-label {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #7dd3fc;  /* Light blue text for switch labels */
+}
+
+/* MUI Switches */
+.MuiSwitch-root {
+  margin-left: 10px;
+}
+
+/* Generate Button */
+.generate-btn {
+  padding: 15px 40px;  /* Slightly larger padding */
+  background-color: #3b82f6;  /* Bright blue background */
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #f5f5f5;  /* Light text for contrast */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* Subtle shadow */
+}
+
+.generate-btn:hover {
+  background-color: #2563eb;  /* Darker blue on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);  /* Stronger shadow on hover */
+}

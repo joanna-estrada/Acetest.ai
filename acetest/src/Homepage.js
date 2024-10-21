@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './HomePage.css';
 import { useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
+import { Switch } from '@mui/material';  // Import the MUI Switch component
 
 const HomePage = () => {
   const [file, setFile] = useState(null);
@@ -25,13 +26,18 @@ const HomePage = () => {
     navigate('/testgenpage');
   };
 
+  // Trigger file input click when the custom button is clicked
+  const triggerFileUpload = () => {
+    document.getElementById('file-upload').click();
+  };
+
   return (
     <div className="homepage">
       {/* Header Section with logo and blurb */}
       <header className="homepage-header">
         <div className="header-content">
           <div className="logo-container">
-          <img src={`${process.env.PUBLIC_URL}/img/logo.png`} alt="AceTest Logo" className="logo" />
+            <img src={`${process.env.PUBLIC_URL}/img/logo.png`} alt="AceTest Logo" className="logo" />
           </div>
           <div className="blurb-container">
             <h1 className="title">AceTest.AI</h1>
@@ -47,7 +53,11 @@ const HomePage = () => {
         {/* Left: File Upload */}
         <div className="left-section"> 
           <label htmlFor="file-upload" className="label">Upload notes, teacher slides:</label>
-          <input type="file" id="file-upload" onChange={handleFileUpload} accept=".pdf,.docx,.pptx,.txt" className="input" />
+          <input type="file" id="file-upload" onChange={handleFileUpload} accept=".pdf,.docx,.pptx,.txt" className="input-file" />
+          <button className="custom-upload-btn" onClick={triggerFileUpload}>
+            Choose File
+          </button>
+          <span className="file-name">{file ? file.name : "No file chosen"}</span>
         </div>
 
         {/* Right: Detailed Exam Info */}
@@ -67,23 +77,19 @@ const HomePage = () => {
       <div className="switches-section">
         <div className="switch-container">
           <label htmlFor="multiple-choice" className="switch-label">Multiple Choice</label>
-          <input
-            type="checkbox" 
-            id="multiple-choice" 
-            checked={multipleChoice} 
+          <Switch
+            checked={multipleChoice}
             onChange={() => setMultipleChoice(!multipleChoice)}
-            className="checkbox"
+            inputProps={{ 'aria-label': 'controlled' }}
           />
         </div>
 
         <div className="switch-container">
-          <label htmlFor="open-ended" className="switch-label">Open Ended</label>
-          <input
-            type="checkbox"
-            id="open-ended"
+          <label htmlFor="open-ended" className="switch-label">True or False</label>
+          <Switch
             checked={openEnded}
             onChange={() => setOpenEnded(!openEnded)}
-            className="checkbox"
+            inputProps={{ 'aria-label': 'controlled' }}
           />
         </div>
 
